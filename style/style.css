@@ -1,0 +1,93 @@
+:root{
+    /*Criação de variáveis para padronização*/
+    --vermelho: #E50914;
+    --preta: #141414;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*ELEMENTOS BASE*/
+body{
+    /*Utilizando a variável*/
+    background-color: var(--preta);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+header .container{
+    display: flex;
+    /*A flex direction já é atribuida automaticamente ao utilizarmos o display flex*/
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+header .logo{
+    color: var(--vermelho);
+    font-family: 'Arial Black';
+    font-size: 40px;
+}
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+header nav a:hover{
+    color: #fff;
+}
+/*FILME PRINCIPAL*/
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50) 100%), url('../img/capa-principal.jpg');
+    height: 400px;
+    background-size: cover;
+    display: flex;
+    /*Flex-direction formatado para coluna, ao invés de linha*/
+    flex-direction: column;
+    justify-content: center;
+    /*Flex-start faz com que o conteúdo fique a esquerda*/
+    align-items: flex-start;
+}
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.botao{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+    /*O primeiro valor do padding ajusta o eixo Y, o segundo o eixo X*/
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+.botao i{
+    margin-right: 8px;
+}
+.container{
+    margin-left: 20px;
+}
+.filme-principal .container{
+    /*Aqui estamos dando um limite máximo de largura do nosso container*/
+    /*Caso a página fique menor, o texto ficará alinhado de acordo com o tamanho delimitado por nós!*/
+    width: 60%;
+}
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+.carrosel-filmes{
+    margin-top: 5px;
+}
